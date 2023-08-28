@@ -9,12 +9,22 @@ public class SpeedControlle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpeedCount = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(SpeedCount > 0)
+        {
+            if((Input.GetKey("left")));
+        }
+        switch(SpeedCount)
+        {
+            case 1:
+                {
+
+                }
+        }
     }
 }

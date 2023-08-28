@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class CameraContoroller : MonoBehaviour
 {
-    float CameraSpeed;
+    GameObject Player;
+    Vector3 Playerpos;
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(PlayerController.playerspeed / 1175, 0, 0);
+        Player = GameObject.Find("Player");
+        Playerpos = Player.transform.position;
+        this.gameObject.transform.position = (new Vector3(Playerpos.x, Playerpos.y, -15));
     }
 }

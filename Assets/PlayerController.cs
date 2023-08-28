@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour
 {
 
     Rigidbody2D rigid2D;
-    float jumpForce = 680.0f;
+    float jumpForce = 1020.0f;
 
-    public static float playerspeed = 11;//プレイヤーの移動速度
+    public static float playerspeed = 20;//プレイヤーの移動速度
 
     void Start()
     {

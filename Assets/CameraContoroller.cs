@@ -12,6 +12,6 @@ public class CameraContoroller : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         Playerpos = Player.transform.position;
-        this.gameObject.transform.position = (new Vector3(Playerpos.x + 15, Playerpos.y, -30));
+        this.gameObject.transform.position = (new Vector3(Playerpos.x + 25, Playerpos.y + 5, -15));
     }
 }

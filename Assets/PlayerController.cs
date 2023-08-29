@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigid2D;
     float jumpForce = 1020.0f;
 
-    public static float playerspeed = 20;//プレイヤーの移動速度
+    public static float playerspeed;//プレイヤーの移動速度
 
     void Start()
     {
+        playerspeed= 20;
+
      this.rigid2D = GetComponent<Rigidbody2D>();   
     }
 
@@ -19,7 +21,19 @@ public class PlayerController : MonoBehaviour
     //キーを押すと、プレイヤーが移動する
     void Update()
     {
-        //常に行う処理
+        if(Input.GetKey("left"))
+        {
+            playerspeed= 10;
+        }
+        else if(Input.GetKey("right"))
+        {
+            playerspeed= 30;
+        }
+        else
+        {
+            playerspeed= 20;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             this.rigid2D.AddForce(transform.up * this.jumpForce);
